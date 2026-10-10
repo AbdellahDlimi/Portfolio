@@ -49,8 +49,8 @@ export default function ConstellationCanvas() {
         this.vx = (Math.random() - 0.5) * 0.45;
         this.vy = (Math.random() - 0.5) * 0.45;
         this.radius = Math.random() * 1.6 + 0.8;
-        // Subtle blue or violet hue
-        this.color = Math.random() > 0.4 ? 'rgba(96, 165, 250, 0.4)' : 'rgba(167, 139, 250, 0.4)';
+        // Subtle amber and warm gold hue
+        this.color = Math.random() > 0.4 ? 'rgba(245, 158, 11, 0.45)' : 'rgba(251, 191, 36, 0.35)';
       }
 
       update() {
@@ -102,8 +102,8 @@ export default function ConstellationCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < maxDistance) {
-            const alpha = (1 - dist / maxDistance) * 0.22;
-            ctx.strokeStyle = `rgba(51, 65, 85, ${alpha})`;
+            const alpha = (1 - dist / maxDistance) * 0.20;
+            ctx.strokeStyle = `rgba(217, 119, 6, ${alpha})`;
             ctx.lineWidth = 0.8;
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);

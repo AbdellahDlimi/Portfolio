@@ -50,7 +50,7 @@ export default function ContactSection() {
           particleCount: 75,
           spread: 60,
           origin: { y: 0.8 },
-          colors: ['#3b82f6', '#8b5cf6', '#60a5fa']
+          colors: ['#f59e0b', '#fbbf24', '#d97706', '#eab308']
         });
       } catch (err) {
         // ignore confetti fallback
@@ -90,7 +90,7 @@ export default function ContactSection() {
   return (
     <section 
       id="contact" 
-      className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#1e293b]/70"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#27272a]"
     >
       {/* Background Radial Glow */}
       <div 
@@ -102,7 +102,7 @@ export default function ContactSection() {
         
         {/* Left Column: Heading, description & direct links */}
         <div className="lg:col-span-6 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Get In Touch</span>
           </div>
@@ -119,12 +119,12 @@ export default function ContactSection() {
 
           <div className="space-y-3 pt-2">
             <div className="flex items-center gap-3 text-slate-300 text-sm">
-              <div className="p-2 rounded-lg bg-slate-800/80 border border-slate-700/60 text-blue-400">
+              <div className="p-2 rounded-lg bg-zinc-800/80 border border-zinc-700/60 text-amber-400">
                 <Mail className="w-4 h-4" />
               </div>
               <a 
                 href={`mailto:${personalInfo.email}`} 
-                className="hover:text-blue-400 transition-colors font-medium"
+                className="hover:text-amber-400 transition-colors font-medium"
               >
                 {personalInfo.email}
               </a>
@@ -132,12 +132,12 @@ export default function ContactSection() {
 
             {personalInfo.phone && (
               <div className="flex items-center gap-3 text-slate-300 text-sm">
-                <div className="p-2 rounded-lg bg-slate-800/80 border border-slate-700/60 text-cyan-400">
+                <div className="p-2 rounded-lg bg-zinc-800/80 border border-zinc-700/60 text-amber-400">
                   <Phone className="w-4 h-4" />
                 </div>
                 <a 
                   href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} 
-                  className="hover:text-cyan-400 transition-colors font-medium"
+                  className="hover:text-amber-400 transition-colors font-medium"
                 >
                   {personalInfo.phone}
                 </a>
@@ -145,7 +145,7 @@ export default function ContactSection() {
             )}
 
             <div className="flex items-center gap-3 text-slate-300 text-sm">
-              <div className="p-2 rounded-lg bg-slate-800/80 border border-slate-700/60 text-emerald-400">
+              <div className="p-2 rounded-lg bg-zinc-800/80 border border-zinc-700/60 text-emerald-400">
                 <MapPin className="w-4 h-4" />
               </div>
               <span>{personalInfo.location}</span>
@@ -158,7 +158,7 @@ export default function ContactSection() {
               href={personalInfo.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#111827] border border-[#1e293b] hover:border-blue-500/50 text-slate-300 hover:text-white text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#14141a] border border-[#27272a] hover:border-amber-500/50 text-slate-300 hover:text-white text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
             >
               <LinkedinIcon className="w-4 h-4 text-[#0077b5]" />
               <span>Connect on LinkedIn</span>
@@ -169,7 +169,7 @@ export default function ContactSection() {
               href={personalInfo.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#111827] border border-[#1e293b] hover:border-slate-600 text-slate-300 hover:text-white text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#14141a] border border-[#27272a] hover:border-amber-500/50 text-slate-300 hover:text-white text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
             >
               <GithubIcon className="w-4 h-4 text-white" />
               <span>View GitHub</span>
@@ -180,11 +180,11 @@ export default function ContactSection() {
 
         {/* Right Column: Sleek minimalist underline form */}
         <div className="lg:col-span-6">
-          <div className="p-8 sm:p-10 rounded-3xl bg-[#111827]/90 border border-[#1e293b] shadow-card-depth backdrop-blur-md relative overflow-hidden">
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#14141a]/95 border border-[#27272a] shadow-card-depth backdrop-blur-md relative overflow-hidden">
             
             {status === 'success' ? (
               <div className="py-12 text-center space-y-4 animate-tab-content">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center shadow-glow-amber">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold text-white tracking-tight">Message Received!</h3>
@@ -194,14 +194,14 @@ export default function ContactSection() {
                 <button
                   type="button"
                   onClick={() => setStatus('idle')}
-                  className="mt-4 px-5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-200 hover:bg-slate-700 transition-colors"
+                  className="mt-4 px-5 py-2 rounded-xl text-xs font-semibold bg-zinc-800 text-slate-200 hover:bg-zinc-700 transition-colors"
                 >
                   Send another message
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <h3 className="text-xl font-bold text-white tracking-tight pb-2 border-b border-slate-800">
+                <h3 className="text-xl font-bold text-white tracking-tight pb-2 border-b border-[#27272a]">
                   Direct Dispatch
                 </h3>
 
@@ -213,7 +213,7 @@ export default function ContactSection() {
 
                 {/* Name Underline Input */}
                 <div className="space-y-1 group">
-                  <label htmlFor="name" className="text-xs font-semibold text-slate-400 group-focus-within:text-blue-400 transition-colors">
+                  <label htmlFor="name" className="text-xs font-semibold text-slate-400 group-focus-within:text-amber-400 transition-colors">
                     Your Name
                   </label>
                   <input
@@ -224,13 +224,13 @@ export default function ContactSection() {
                     onChange={handleChange}
                     placeholder="e.g. Alex Morgan"
                     required
-                    className="w-full py-3 bg-transparent text-white placeholder:text-slate-600 border-b border-slate-700 focus:border-blue-500 focus:outline-none transition-colors text-sm"
+                    className="w-full py-3 bg-transparent text-white placeholder:text-slate-600 border-b border-zinc-800 focus:border-amber-400 focus:outline-none transition-colors text-sm"
                   />
                 </div>
 
                 {/* Email Underline Input */}
                 <div className="space-y-1 group">
-                  <label htmlFor="email" className="text-xs font-semibold text-slate-400 group-focus-within:text-blue-400 transition-colors">
+                  <label htmlFor="email" className="text-xs font-semibold text-slate-400 group-focus-within:text-amber-400 transition-colors">
                     Email Address
                   </label>
                   <input
@@ -241,13 +241,13 @@ export default function ContactSection() {
                     onChange={handleChange}
                     placeholder="alex@company.com"
                     required
-                    className="w-full py-3 bg-transparent text-white placeholder:text-slate-600 border-b border-slate-700 focus:border-blue-500 focus:outline-none transition-colors text-sm"
+                    className="w-full py-3 bg-transparent text-white placeholder:text-slate-600 border-b border-zinc-800 focus:border-amber-400 focus:outline-none transition-colors text-sm"
                   />
                 </div>
 
                 {/* Message Textarea */}
                 <div className="space-y-1 group">
-                  <label htmlFor="message" className="text-xs font-semibold text-slate-400 group-focus-within:text-blue-400 transition-colors">
+                  <label htmlFor="message" className="text-xs font-semibold text-slate-400 group-focus-within:text-amber-400 transition-colors">
                     Message
                   </label>
                   <textarea
@@ -258,16 +258,16 @@ export default function ContactSection() {
                     onChange={handleChange}
                     placeholder="Tell me about your project, team, or opportunity..."
                     required
-                    className="w-full py-3 bg-transparent text-white placeholder:text-slate-600 border-b border-slate-700 focus:border-blue-500 focus:outline-none transition-colors text-sm resize-none"
+                    className="w-full py-3 bg-transparent text-white placeholder:text-slate-600 border-b border-zinc-800 focus:border-amber-400 focus:outline-none transition-colors text-sm resize-none"
                   />
                 </div>
 
-                {/* Full-width Blue Submit Button */}
+                {/* Full-width Amber Submit Button */}
                 <button
                   type="submit"
                   disabled={status === 'loading'}
                   id="submit-message-btn"
-                  className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-blue-800 text-white font-semibold text-sm sm:text-base shadow-glow-blue transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer group"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 disabled:opacity-50 text-slate-950 font-bold text-sm sm:text-base shadow-glow-amber transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer group"
                 >
                   {status === 'loading' ? (
                     <>

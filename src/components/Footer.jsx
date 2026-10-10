@@ -9,17 +9,24 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full border-t border-[#1e293b] bg-[#0a0e17] py-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs">
+    <footer className="w-full border-t border-[#27272a] bg-[#09090b] py-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         
         {/* Brand info */}
-        <div className="flex flex-col items-center sm:items-start gap-1">
-          <p className="text-slate-300 font-semibold text-sm">
-            {personalInfo.name} — Portfolio
-          </p>
-          <p className="text-slate-500">
-            © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
-          </p>
+        <div className="flex items-center gap-3">
+          <img 
+            src="/favicon.png" 
+            alt="AD Logo" 
+            className="w-8 h-8 rounded-lg object-cover ring-1 ring-amber-500/40 shadow-sm"
+          />
+          <div className="flex flex-col items-center sm:items-start gap-0.5">
+            <p className="text-slate-200 font-semibold text-sm">
+              {personalInfo.name} — Portfolio
+            </p>
+            <p className="text-slate-500 text-[11px]">
+              © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+            </p>
+          </div>
         </div>
 
         {/* Note: Built with love & coffee */}

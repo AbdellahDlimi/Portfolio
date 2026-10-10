@@ -41,7 +41,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#0a0e17] text-[#f8fafc] font-sans selection:bg-blue-600/30 selection:text-blue-200">
+    <div className="relative min-h-screen bg-[#09090b] text-[#f8fafc] font-sans selection:bg-amber-500/30 selection:text-amber-200">
       
       {/* Interactive Constellation Neural Canvas */}
       <ConstellationCanvas />
@@ -50,18 +50,18 @@ export default function App() {
       <div
         className="pointer-events-none fixed inset-0 z-10 transition-opacity duration-500 opacity-60 hidden md:block"
         style={{
-          background: `radial-gradient(650px circle at ${mousePos.x}px ${mousePos.y}px, rgba(59, 130, 246, 0.04), rgba(139, 92, 246, 0.03), transparent 70%)`
+          background: `radial-gradient(650px circle at ${mousePos.x}px ${mousePos.y}px, rgba(245, 158, 11, 0.05), rgba(217, 119, 6, 0.03), transparent 70%)`
         }}
         aria-hidden="true"
       />
 
       {/* Top Ambient Gradient Orbs */}
       <div 
-        className="pointer-events-none absolute -top-40 left-1/4 w-96 h-96 rounded-full bg-blue-600/10 blur-[120px] -z-10" 
+        className="pointer-events-none absolute -top-40 left-1/4 w-96 h-96 rounded-full bg-amber-500/10 blur-[130px] -z-10" 
         aria-hidden="true" 
       />
       <div 
-        className="pointer-events-none absolute top-1/3 right-10 w-96 h-96 rounded-full bg-violet-600/10 blur-[130px] -z-10" 
+        className="pointer-events-none absolute top-1/3 right-10 w-96 h-96 rounded-full bg-amber-600/10 blur-[140px] -z-10" 
         aria-hidden="true" 
       />
 

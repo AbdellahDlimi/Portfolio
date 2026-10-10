@@ -7,7 +7,7 @@ export default function EducationSection() {
     <div className="animate-tab-content space-y-8 max-w-4xl mx-auto">
       {/* Section Header */}
       <div className="text-center sm:text-left space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold uppercase tracking-wider">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider">
           <GraduationCap className="w-3.5 h-3.5" />
           <span>Academic Background</span>
         </div>
@@ -24,19 +24,19 @@ export default function EducationSection() {
         {educations.map((edu) => (
           <div 
             key={edu.id}
-            className="p-6 sm:p-8 rounded-2xl bg-[#111827] border border-[#1e293b] hover:border-slate-700/80 hover:bg-[#161f30] transition-all duration-300 shadow-card-depth glow-card"
+            className="p-6 sm:p-8 rounded-2xl bg-[#14141a]/95 border border-[#27272a] hover:border-amber-500/40 hover:bg-[#181822] transition-all duration-300 shadow-card-depth glow-card"
           >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800/80">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#27272a]">
               <div className="space-y-1">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-xl bg-purple-500/15 text-purple-400">
+                  <div className="p-2 rounded-xl bg-amber-500/15 text-amber-400">
                     <GraduationCap className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                       {edu.degree}
                     </h3>
-                    <p className="text-sm sm:text-base font-semibold text-purple-400">
+                    <p className="text-sm sm:text-base font-semibold text-amber-400">
                       {edu.institution}
                     </p>
                   </div>
@@ -44,16 +44,16 @@ export default function EducationSection() {
               </div>
 
               {/* Period Pill */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0f172a] border border-[#1e293b] text-slate-300 text-xs font-medium self-start sm:self-center">
-                <Calendar className="w-3.5 h-3.5 text-slate-400" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0f0f13] border border-[#27272a] text-zinc-300 text-xs font-medium self-start sm:self-center">
+                <Calendar className="w-3.5 h-3.5 text-zinc-400" />
                 <span>{edu.period}</span>
               </div>
             </div>
 
             {/* Honors Badge */}
             {edu.honors && (
-              <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
-                <Award className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-semibold">
+                <Award className="w-3.5 h-3.5 text-amber-400" />
                 <span>{edu.honors}</span>
               </div>
             )}
@@ -63,7 +63,7 @@ export default function EducationSection() {
               {edu.details.map((detail, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <div className="mt-1 flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-purple-400" />
+                    <CheckCircle2 className="w-4 h-4 text-amber-400" />
                   </div>
                   <span className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                     {detail}

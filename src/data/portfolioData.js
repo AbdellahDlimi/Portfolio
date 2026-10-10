@@ -60,8 +60,8 @@ export const experiences = [
     location: "Agadir, Maroc",
     description: "Réalisation de solutions complètes en Deep Learning vibratoire, Business Intelligence, modélisation de bases de données distribuées et Machine Learning appliqué.",
     achievements: [
-      "VibAE-Monitor : Conception d'un système intelligent de maintenance prédictive par Autoencodeur CNN 2D et DenseNet121 pour la détection d'anomalies vibratoires sur roulements mécaniques (97–99% de précision).",
-      "Architecture BDA : Modélisation Merise avancée et développement sous Oracle DB de plus de 40 déclencheurs (triggers) PL/SQL et procédures pour un système transactionnel de bibliothèque.",
+      "VibAE-Monitor : Conception d'un système intelligent de maintenance prédictive par Autoencodeur CNN 2D et DenseNet121 pour la détection d'anomalies vibratoires sur roulements mécaniques.",
+      "Architecture BDA : Modélisation Merise et développement sous Oracle DB de déclencheurs PL/SQL et procédures stockées pour un système transactionnel de bibliothèque.",
       "Data Warehouse : Conception d'un entrepôt de données en étoile sous AWS RDS avec flux ETL automatisés via Talend Open Studio (PDI) et 2 tableaux de bord décisionnels Power BI (24 mesures DAX).",
       "Machine Learning Suite : Entraînement et benchmarking d'algorithmes supervisés (régression, arbres de décision, Random Forest, KNN) et clustering non supervisé (K-Means sur Mall Customers)."
     ]
@@ -76,7 +76,7 @@ export const educations = [
     period: "2022 — Présent",
     honors: "5ème Année (Dernière Année) en cours",
     details: [
-      "Spécialisation avancée : Machine Learning, Deep Learning, Architectures Big Data (Hadoop, HDFS, MapReduce, Spark, PySpark), Bases de Données Avancées (Oracle DB, PL/SQL, NoSQL), Business Intelligence & Cloud.",
+      "Modules de spécialisation : Machine Learning, Deep Learning, Architectures Big Data (Hadoop, HDFS, MapReduce, Spark, PySpark), Bases de Données (Oracle DB, PL/SQL, NoSQL), Business Intelligence & Cloud.",
       "Gestion de projets d'ingénierie appliquée de bout en bout : de la collecte et prétraitement de données jusqu'au déploiement et monitoring de modèles."
     ]
   },
@@ -128,7 +128,7 @@ export const projects = [
     category: "ai-dl",
     categoryName: "Deep Learning & AI",
     badge: "Projet d'équipe — 5 membres • Juin 2026",
-    description: "Autoencodeur CNN 2D (spectrogrammes STFT) pour la détection d'anomalies vibratoires sur roulements mécaniques (dataset CWRU), couplé à un classifieur DenseNet121 fine-tuné identifiant 10 classes de défauts (97–99% de précision).",
+    description: "Autoencodeur CNN 2D (spectrogrammes STFT) pour la détection d'anomalies vibratoires sur roulements mécaniques (dataset CWRU), couplé à un classifieur DenseNet121 fine-tuné identifiant 10 classes de défauts avec évaluation rigoureuse sur jeu de test.",
     highlights: [
       "Calcul du score de sévérité multi-zone et dashboard de monitoring temps réel (FastAPI + Plotly).",
       "Module d'analyse batch, export automatique de rapports PDF d'inspection et traçabilité rigoureuse des modèles avec MLflow."
@@ -137,7 +137,7 @@ export const projects = [
     github: "https://github.com/AbdellahDlimi",
     demo: "https://github.com/AbdellahDlimi",
     featured: true,
-    stats: "97–99% Précision"
+    stats: "CNN 2D & STFT"
   },
   {
     id: "proj-2",
@@ -149,7 +149,7 @@ export const projects = [
     description: "Conception et déploiement d'un entrepôt de données en étoile (modèle dimensionnel couvrant plus de 2 000 trajets) hébergé sur AWS RDS avec pipeline d'intégration ETL Talend PDI.",
     highlights: [
       "Analyses statistiques inférentielles approfondies (ANOVA, matrices de corrélation, régressions linéaires).",
-      "Conception de 2 tableaux de bord Power BI décisionnels interactifs avec 24 mesures DAX avancées pour le pilotage des indicateurs clés (KPIs)."
+      "Conception de 2 tableaux de bord Power BI décisionnels interactifs avec 24 mesures DAX calculées pour le pilotage des indicateurs clés (KPIs)."
     ],
     tags: ["Talend PDI", "AWS RDS", "Power BI", "ETL", "DAX", "Data Mining", "ANOVA", "Star Schema"],
     github: "https://github.com/AbdellahDlimi",
@@ -164,16 +164,16 @@ export const projects = [
     category: "rdbms-app",
     categoryName: "SGBD & BDA",
     badge: "Projet BDA • 2025 – 2026",
-    description: "Modélisation Merise avancée (MCD, MLD, MPD) et implémentation sous Oracle DB d'un système transactionnel complet pour la gestion de bibliothèques avec logique métier en PL/SQL.",
+    description: "Modélisation Merise (MCD, MLD, MPD) et implémentation sous Oracle DB d'un système transactionnel complet pour la gestion de bibliothèques avec logique métier en PL/SQL.",
     highlights: [
       "Implémentation de packages et procédures stockées modulaires en PL/SQL pour les transactions de prêt, retour et gestion des adhérents.",
-      "Développement de 40 déclencheurs (triggers) spécialisés (calcul automatique des amendes, gestion des stocks, détection des retards et blocage des comptes)."
+      "Développement de déclencheurs (triggers) et procédures stockées pour la logique métier (gestion des prêts, détection des retards et mise à jour des statuts)."
     ],
     tags: ["Oracle DB", "PL/SQL", "Merise", "SQL", "Triggers", "Procédures Stockées", "SGBD"],
     github: "https://github.com/AbdellahDlimi",
     demo: "https://github.com/AbdellahDlimi",
     featured: true,
-    stats: "40+ Triggers Métier"
+    stats: "Modélisation & PL/SQL"
   },
   {
     id: "proj-4",
@@ -255,69 +255,69 @@ export const skillCategories = [
     category: "ML & Data Science",
     icon: "Brain",
     skills: [
-      { name: "Scikit-learn", level: "Expert", highlight: true },
-      { name: "PyTorch", level: "Avancé", highlight: true },
-      { name: "TensorFlow & Keras", level: "Avancé", highlight: true },
-      { name: "RAG & LLMs (Gemini)", level: "Avancé", highlight: true },
-      { name: "NumPy & Pandas", level: "Expert", highlight: true },
-      { name: "Matplotlib & Seaborn", level: "Expert" },
-      { name: "OpenCV & OCR", level: "Avancé" },
-      { name: "FastAPI", level: "Expert", highlight: true },
-      { name: "Traitement du Signal (STFT)", level: "Avancé" }
+      { name: "Scikit-learn", level: "Opérationnel", highlight: true },
+      { name: "PyTorch", level: "Pratique", highlight: true },
+      { name: "TensorFlow & Keras", level: "Pratique", highlight: true },
+      { name: "RAG & LLMs (Gemini)", level: "Pratique", highlight: true },
+      { name: "NumPy & Pandas", level: "Opérationnel", highlight: true },
+      { name: "Matplotlib & Seaborn", level: "Pratique" },
+      { name: "OpenCV & OCR", level: "Pratique" },
+      { name: "FastAPI", level: "Opérationnel", highlight: true },
+      { name: "Traitement du Signal (STFT)", level: "Académique" }
     ]
   },
   {
     category: "Big Data & Écosystème Distribué",
     icon: "Cpu",
     skills: [
-      { name: "Apache Kafka", level: "Avancé", highlight: true },
-      { name: "Apache Spark", level: "Avancé", highlight: true },
-      { name: "PySpark", level: "Avancé", highlight: true },
-      { name: "Hadoop & HDFS", level: "Avancé", highlight: true },
-      { name: "MapReduce", level: "Avancé" },
-      { name: "Docker & Compose", level: "Avancé", highlight: true }
+      { name: "Apache Kafka", level: "Pratique", highlight: true },
+      { name: "Apache Spark", level: "Pratique", highlight: true },
+      { name: "PySpark", level: "Pratique", highlight: true },
+      { name: "Hadoop & HDFS", level: "Académique", highlight: true },
+      { name: "MapReduce", level: "Académique" },
+      { name: "Docker & Compose", level: "Pratique", highlight: true }
     ]
   },
   {
     category: "BI, Bases de Données & Outils",
     icon: "Layers",
     skills: [
-      { name: "Neo4j (Graphes)", level: "Avancé", highlight: true },
-      { name: "PostgreSQL & pgvector", level: "Expert", highlight: true },
-      { name: "Power BI (DAX)", level: "Expert", highlight: true },
-      { name: "Talend PDI", level: "Avancé", highlight: true },
-      { name: "Oracle DB & PL/SQL", level: "Expert", highlight: true },
-      { name: "40+ Triggers & Stored Proc", level: "Expert", highlight: true },
-      { name: "MySQL", level: "Avancé" },
-      { name: "MinIO / S3", level: "Avancé" },
-      { name: "Git & MLflow", level: "Avancé", highlight: true }
+      { name: "Neo4j (Graphes)", level: "Pratique", highlight: true },
+      { name: "PostgreSQL & pgvector", level: "Opérationnel", highlight: true },
+      { name: "Power BI (DAX)", level: "Pratique", highlight: true },
+      { name: "Talend PDI", level: "Pratique", highlight: true },
+      { name: "Oracle DB & PL/SQL", level: "Pratique", highlight: true },
+      { name: "Procédures Stockées PL/SQL", level: "Pratique" },
+      { name: "MySQL", level: "Opérationnel" },
+      { name: "MinIO / S3", level: "Pratique" },
+      { name: "Git & MLflow", level: "Pratique", highlight: true }
     ]
   },
   {
     category: "Langages & Frameworks",
     icon: "Code2",
     skills: [
-      { name: "Python (FastAPI)", level: "Expert", highlight: true },
-      { name: "SQL & PL/SQL", level: "Expert", highlight: true },
-      { name: "React 18 & Vite", level: "Avancé", highlight: true },
-      { name: "Tailwind CSS", level: "Avancé" },
+      { name: "Python", level: "Opérationnel", highlight: true },
+      { name: "SQL & PL/SQL", level: "Opérationnel", highlight: true },
+      { name: "React 18 & Vite", level: "Pratique", highlight: true },
+      { name: "Tailwind CSS", level: "Pratique" },
       { name: "R", level: "Intermédiaire" },
       { name: "Java", level: "Intermédiaire" },
       { name: "JavaScript", level: "Intermédiaire" },
-      { name: "C", level: "Intermédiaire" },
-      { name: "Merise & UML", level: "Expert" }
+      { name: "C", level: "Académique" },
+      { name: "Merise & UML", level: "Pratique" }
     ]
   },
   {
     category: "Cloud, Sécurité & Architecture",
     icon: "Wrench",
     skills: [
-      { name: "Architecture Event-Driven", level: "Expert", highlight: true },
-      { name: "Microservices Cloud-Native", level: "Avancé", highlight: true },
-      { name: "Chiffrement KMS / Fernet (AES)", level: "Avancé", highlight: true },
-      { name: "Zero-Knowledge KYC & RBAC", level: "Expert", highlight: true },
-      { name: "Intégration Stripe", level: "Avancé", highlight: true },
-      { name: "Tests Pytest Asynchrones", level: "Expert" }
+      { name: "Architecture Event-Driven", level: "Pratique", highlight: true },
+      { name: "Microservices Cloud-Native", level: "Pratique", highlight: true },
+      { name: "Chiffrement KMS / Fernet (AES)", level: "Pratique", highlight: true },
+      { name: "Sécurité KYC & RBAC", level: "Pratique", highlight: true },
+      { name: "Intégration Stripe Elements", level: "Pratique", highlight: true },
+      { name: "Tests Pytest Asynchrones", level: "Pratique" }
     ]
   }
 ];
@@ -333,9 +333,10 @@ export const certifications = [
     credentialId: "UC-a435fac9-5faa-48f0-a14f-20875abc7858",
     url: "https://ude.my/UC-a435fac9-5faa-48f0-a14f-20875abc7858",
     pdf: "/certificates/udemy-python-advanced.pdf",
+    image: "/certificates/images/udemy-python-advanced.jpg",
     category: "python",
     categoryLabel: "Python & Dev",
-    skills: ["Python 3", "POO", "Algorithmes", "Programmation Avancée"],
+    skills: ["Python 3", "POO", "Algorithmes", "Structures de Données"],
     highlight: true
   },
   {
@@ -346,6 +347,7 @@ export const certifications = [
     duration: "4 heures",
     credentialId: "#42,087,432",
     pdf: "/certificates/datacamp-writing-efficient-python.pdf",
+    image: "/certificates/images/datacamp-writing-efficient-python.jpg",
     category: "python",
     categoryLabel: "Python & Dev",
     skills: ["Code Profiling", "Optimisation Mémoire & Temps", "Built-ins", "Itertools"],
@@ -359,6 +361,7 @@ export const certifications = [
     duration: "4 heures",
     credentialId: "#42,514,288",
     pdf: "/certificates/datacamp-data-ingestion-pandas.pdf",
+    image: "/certificates/images/datacamp-data-ingestion-pandas.jpg",
     category: "data",
     categoryLabel: "Data Engineering",
     skills: ["Pipelines Pandas", "Fichiers Plats & Excel", "APIs & JSON", "Import SQL"],
@@ -372,6 +375,7 @@ export const certifications = [
     duration: "2 heures",
     credentialId: "#41,498,421",
     pdf: "/certificates/datacamp-cloud-computing.pdf",
+    image: "/certificates/images/datacamp-cloud-computing.jpg",
     category: "cloud-db",
     categoryLabel: "Cloud & Systèmes",
     skills: ["Architecture Cloud", "IaaS / PaaS / SaaS", "Scalabilité", "Sécurité Cloud"],
@@ -385,6 +389,7 @@ export const certifications = [
     duration: "2 heures",
     credentialId: "#41,520,784",
     pdf: "/certificates/datacamp-intermediate-python-dev.pdf",
+    image: "/certificates/images/datacamp-intermediate-python-dev.jpg",
     category: "python",
     categoryLabel: "Python & Dev",
     skills: ["POO Python", "Modularité", "Tests & Packaging", "Environnements Virtuels"],
@@ -398,6 +403,7 @@ export const certifications = [
     duration: "2 heures",
     credentialId: "#41,664,289",
     pdf: "/certificates/datacamp-importing-data-python.pdf",
+    image: "/certificates/images/datacamp-importing-data-python.jpg",
     category: "data",
     categoryLabel: "Data Engineering",
     skills: ["APIs REST", "Extraction JSON", "Authentification OAuth", "Pipelines Web"],
@@ -411,6 +417,7 @@ export const certifications = [
     duration: "2 heures",
     credentialId: "#40,913,918",
     pdf: "/certificates/datacamp-sql-intro.pdf",
+    image: "/certificates/images/datacamp-sql-intro.jpg",
     category: "cloud-db",
     categoryLabel: "Bases de données",
     skills: ["Requêtes SQL", "Filtrage & Agrégations", "Sous-requêtes", "Jointures"],
@@ -424,6 +431,7 @@ export const certifications = [
     duration: "Certificat de Réussite",
     credentialId: "CC-73127F8EE1",
     pdf: "/certificates/365ds-python-intro.pdf",
+    image: "/certificates/images/365ds-python-intro.jpg",
     category: "data",
     categoryLabel: "Data Science",
     skills: ["Structures de Données", "Structures de Contrôle", "Fonctions", "Bases NumPy"],
@@ -437,6 +445,7 @@ export const certifications = [
     duration: "Certificat de Réussite",
     credentialId: "CC-AFFDF63D23",
     pdf: "/certificates/365ds-jupyter-intro.pdf",
+    image: "/certificates/images/365ds-jupyter-intro.jpg",
     category: "data",
     categoryLabel: "Data Science",
     skills: ["Jupyter Notebooks", "Analyse Exploratoire (EDA)", "Reproductibilité"],
@@ -450,6 +459,7 @@ export const certifications = [
     duration: "6 heures",
     credentialId: "#37,481,308",
     pdf: "/certificates/datacamp-intermediate-r.pdf",
+    image: "/certificates/images/datacamp-intermediate-r.jpg",
     category: "analytics-ai",
     categoryLabel: "Data Science & R",
     skills: ["Conditions & Boucles", "Fonctions & Famille Apply", "Expressions Régulières"],
@@ -463,6 +473,7 @@ export const certifications = [
     duration: "4 heures",
     credentialId: "#37,538,096",
     pdf: "/certificates/datacamp-java-oop.pdf",
+    image: "/certificates/images/datacamp-java-oop.jpg",
     category: "python",
     categoryLabel: "Programmation",
     skills: ["POO Java", "Classes & Objets", "Encapsulation", "Héritage"],
@@ -476,6 +487,7 @@ export const certifications = [
     duration: "1 heure",
     credentialId: "#37,559,138",
     pdf: "/certificates/datacamp-chatgpt-intro.pdf",
+    image: "/certificates/images/datacamp-chatgpt-intro.jpg",
     category: "analytics-ai",
     categoryLabel: "IA Générative",
     skills: ["Prompt Engineering", "Flux LLM", "Automatisation", "Meilleures Pratiques"],
@@ -489,9 +501,10 @@ export const certifications = [
     duration: "4 heures",
     credentialId: "#38,374,226",
     pdf: "/certificates/datacamp-excel-intro.pdf",
+    image: "/certificates/images/datacamp-excel-intro.jpg",
     category: "analytics-ai",
     categoryLabel: "Data Analytics",
-    skills: ["Formules Avancées", "Nettoyage de Données", "Tableaux Croisés", "Visualisation"],
+    skills: ["Formules & Fonctions", "Nettoyage de Données", "Tableaux Croisés", "Visualisation"],
     highlight: false
   }
 ];
@@ -507,4 +520,60 @@ export const certificateCategories = [
 export const achievements = {
   certifications
 };
+
+export const languages = [
+  {
+    name: "Arabe",
+    code: "AR",
+    flag: "🇲🇦",
+    status: "Langue Maternelle",
+    level: "Pratique Native",
+    description: "Langue maternelle, communication fluide et aisance rédactionnelle bilingue.",
+    percentage: 100,
+    certificate: null
+  },
+  {
+    name: "Français",
+    code: "FR",
+    flag: "🇫🇷",
+    status: "Langue d'Enseignement & Projets",
+    level: "Certifié CEFR B2",
+    scoreBadge: "264 / 400",
+    description: "Cursus d'ingénieur d'État, rédaction de rapports techniques et soutenances de projets.",
+    percentage: 85,
+    certificate: {
+      image: "/french.jpeg",
+      title: "Rosetta Stone Proficiency Test — French",
+      issuer: "Rosetta Stone",
+      cefrLevel: "CEFR Level B2",
+      score: "Score : 264 / 400"
+    }
+  },
+  {
+    name: "Anglais",
+    code: "EN",
+    flag: "🇬🇧",
+    status: "Pratique Technique & Veille",
+    level: "Certifié CEFR B2",
+    scoreBadge: "230 / 400",
+    description: "Veille scientifique continue, documentation technique et communication internationale.",
+    percentage: 85,
+    certificate: {
+      image: "/english.jpeg",
+      title: "Rosetta Stone Proficiency Test — English (British)",
+      issuer: "Rosetta Stone",
+      cefrLevel: "CEFR Level B2",
+      score: "Score : 230 / 400"
+    }
+  }
+];
+
+export const softSkills = [
+  "Esprit d'analyse & Synthèse",
+  "Travail en équipe & Agilité",
+  "Communication & Présentation",
+  "Prise d'initiative & Créativité",
+  "Leadership & Rigueur technique"
+];
+
 
