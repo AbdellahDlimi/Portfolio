@@ -40,8 +40,8 @@ export default function ContactSection() {
     setStatus('loading');
     setErrorMessage('');
 
-    // Optional Formspree endpoint (replace with your Formspree form ID e.g. "xpwzaqvy")
-    const formspreeId = import.meta.env?.VITE_FORMSPREE_ID || '';
+    // Formspree endpoint for contact form submissions
+    const formspreeId = 'mgaoynkp';
 
     const triggerSuccess = () => {
       setStatus('success');
