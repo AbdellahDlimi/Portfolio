@@ -30,7 +30,7 @@ export default function Navbar({ activeTab, onSelectTab, onContactClick }) {
           title="Abdellah Dlimi"
         >
           <img 
-            src="/favicon.png" 
+            src="/logo.jpg" 
             alt="AD Logo" 
             className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-cover ring-1 ring-amber-500/50 group-hover:ring-amber-400 transition-all shadow-glow-amber"
           />

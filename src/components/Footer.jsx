@@ -15,7 +15,7 @@ export default function Footer() {
         {/* Brand info */}
         <div className="flex items-center gap-3">
           <img 
-            src="/favicon.png" 
+            src="/logo.jpg" 
             alt="AD Logo" 
             className="w-8 h-8 rounded-lg object-cover ring-1 ring-amber-500/40 shadow-sm"
           />
