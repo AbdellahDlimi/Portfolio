@@ -75,6 +75,8 @@ export const educations = [
     degree: "Cycle Ingénieur d'État — Big Data, Data Science & Artificial Intelligence",
     period: "2022 — Présent",
     honors: "5ème Année (Dernière Année) en cours",
+    image: "/certificates/images/ensa_agadir.png",
+    imageCaption: "Campus ENSA Agadir",
     details: [
       "Modules de spécialisation : Machine Learning, Deep Learning, Architectures Big Data (Hadoop, HDFS, MapReduce, Spark, PySpark), Bases de Données (Oracle DB, PL/SQL, NoSQL), Business Intelligence & Cloud.",
       "Gestion de projets d'ingénierie appliquée de bout en bout : de la collecte et prétraitement de données jusqu'au déploiement et monitoring de modèles."

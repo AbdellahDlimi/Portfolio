@@ -37,7 +37,7 @@ export default {
         'glow-amber': '0 0 35px -5px rgba(245, 158, 11, 0.45)',
         'glow-blue': '0 0 35px -5px rgba(245, 158, 11, 0.45)',
         'glow-purple': '0 0 35px -5px rgba(217, 119, 6, 0.45)',
-        'card-depth': '0 20px 50px rgba(0, 0, 0, 0.55)',
+        'card-depth': '0 20px 50px rgba(0, 0, 0, 0.53)',
         'nav-depth': '0 10px 30px rgba(0, 0, 0, 0.6)',
       },
       animation: {
