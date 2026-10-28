@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   Mail, 
   Terminal, 
@@ -8,7 +8,10 @@ import {
   ExternalLink,
   Code2,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  FileText,
+  ChevronDown,
+  Eye
 } from 'lucide-react';
 import { 
   GithubIcon, 
@@ -19,6 +22,18 @@ import {
 import { personalInfo } from '../data/portfolioData';
 
 export default function HeroSection({ onContactClick }) {
+  const [cvMenuOpen, setCvMenuOpen] = useState(false);
+  const cvDropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (cvDropdownRef.current && !cvDropdownRef.current.contains(e.target)) {
+        setCvMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
   const socials = [
     {
       name: 'LinkedIn',
@@ -35,7 +50,7 @@ export default function HeroSection({ onContactClick }) {
   return (
     <section 
       id="hero" 
-      className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden"
+      className="relative z-50 min-h-[92vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-visible"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full z-10">
         
@@ -85,6 +100,109 @@ export default function HeroSection({ onContactClick }) {
               <span>Contact Me</span>
               <ArrowRight className="w-4 h-4 opacity-70 group-hover:translate-x-1 transition-transform" />
             </button>
+
+            {/* CV Dropdown Selector (FR & ENG) */}
+            <div className="relative z-50" ref={cvDropdownRef}>
+              <button
+                type="button"
+                onClick={() => setCvMenuOpen(!cvMenuOpen)}
+                id="hero-cv-btn"
+                className="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-[#14141a]/95 hover:bg-[#1c1c24] border border-amber-500/40 hover:border-amber-400 text-white font-semibold text-sm sm:text-base shadow-card-depth transition-all duration-300 hover:shadow-glow-amber cursor-pointer group"
+                aria-expanded={cvMenuOpen}
+              >
+                <FileText className="w-4 h-4 text-amber-400 group-hover:scale-110 transition-transform" />
+                <span>Mon CV / Resume</span>
+                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${cvMenuOpen ? 'rotate-180 text-amber-400' : ''}`} />
+              </button>
+
+              {/* Dropdown Menu */}
+              {cvMenuOpen && (
+                <div className="absolute left-0 mt-2 w-80 sm:w-96 rounded-2xl bg-[#14141a]/98 border border-amber-500/40 p-3.5 shadow-[0_20px_60px_rgba(0,0,0,0.9)] z-[100] animate-fadeIn backdrop-blur-2xl ring-1 ring-amber-500/20">
+                  <div className="px-2 py-1.5 border-b border-[#27272a] mb-2.5 flex items-center justify-between">
+                    <span className="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                      <FileText className="w-3.5 h-3.5" />
+                      Curriculum Vitae
+                    </span>
+                    <span className="text-[10px] text-zinc-400 font-mono px-2 py-0.5 rounded-md bg-zinc-800 border border-zinc-700/50">PDF</span>
+                  </div>
+
+                  {/* Option 1: Français */}
+                  <div className="p-2.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.06] border border-[#27272a] hover:border-amber-500/40 transition-all group/fr mb-2">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-xl">🇫🇷</span>
+                        <div>
+                          <p className="text-xs sm:text-sm font-bold text-white group-hover/fr:text-amber-400 transition-colors">
+                            Version Française
+                          </p>
+                          <p className="text-[11px] text-zinc-400">Élève-Ingénieur Big Data &amp; IA</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 mt-2 pt-2 border-t border-[#27272a]/60">
+                      <a
+                        href={personalInfo.cv.fr}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setCvMenuOpen(false)}
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-medium transition-colors"
+                      >
+                        <Eye className="w-3.5 h-3.5 text-amber-400" />
+                        <span>Consulter</span>
+                      </a>
+                      <a
+                        href={personalInfo.cv.fr}
+                        download="CV_Abdellah_Dlimi_FR.pdf"
+                        onClick={() => setCvMenuOpen(false)}
+                        className="inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/30 text-amber-300 text-xs font-medium transition-colors"
+                        title="Télécharger le fichier PDF"
+                      >
+                        <Download className="w-3.5 h-3.5" />
+                        <span>Télécharger</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Option 2: English */}
+                  <div className="p-2.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.06] border border-[#27272a] hover:border-amber-500/40 transition-all group/en">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-xl">🇬🇧</span>
+                        <div>
+                          <p className="text-xs sm:text-sm font-bold text-white group-hover/en:text-amber-400 transition-colors">
+                            English Version
+                          </p>
+                          <p className="text-[11px] text-zinc-400">Big Data &amp; AI Engineering Student</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 mt-2 pt-2 border-t border-[#27272a]/60">
+                      <a
+                        href={personalInfo.cv.en}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setCvMenuOpen(false)}
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-medium transition-colors"
+                      >
+                        <Eye className="w-3.5 h-3.5 text-amber-400" />
+                        <span>View</span>
+                      </a>
+                      <a
+                        href={personalInfo.cv.en}
+                        download="CV_Abdellah_Dlimi_ENG.pdf"
+                        onClick={() => setCvMenuOpen(false)}
+                        className="inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/30 text-amber-300 text-xs font-medium transition-colors"
+                        title="Download PDF directly"
+                      >
+                        <Download className="w-3.5 h-3.5" />
+                        <span>Download</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              )}
+            </div>
 
             {/* Social Buttons */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">

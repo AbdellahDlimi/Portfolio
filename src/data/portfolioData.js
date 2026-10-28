@@ -11,6 +11,10 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/abdellah-dlimi-78a719330",
     github: "https://github.com/AbdellahDlimi",
   },
+  cv: {
+    fr: "/cv/CV_Abdellah_Dlimi___Fr.pdf",
+    en: "/cv/CV_Dlimi_Abdellah___Eng.pdf"
+  },
   stats: [
     { label: "Année d'Ingénierie", value: "5ème ENSA" },
     { label: "Stages Techniques", value: "2 Stages" }
