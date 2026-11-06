@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import CustomCursor from './components/CustomCursor';
 import ConstellationCanvas from './components/ConstellationCanvas';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
@@ -43,6 +44,9 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-[#09090b] text-[#f8fafc] font-sans selection:bg-amber-500/30 selection:text-amber-200">
       
+      {/* Custom Interactive Yellow Pointer & Glowing Halo */}
+      <CustomCursor />
+
       {/* Interactive Constellation Neural Canvas */}
       <ConstellationCanvas />
 

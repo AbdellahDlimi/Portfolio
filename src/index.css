@@ -36,6 +36,16 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #3f3f46;
   }
+
+  /* Desktop Custom Cursor replacement */
+  @media (hover: hover) and (pointer: fine) {
+    body, a, button, [role="button"], label, select, .cursor-pointer {
+      cursor: none !important;
+    }
+    input, textarea {
+      cursor: text;
+    }
+  }
 }
 
 /* Glassmorphism utility */
