@@ -65,7 +65,7 @@ export default function AchievementsSection() {
           {/* Quick Metrics Banner */}
           <div className="flex items-center gap-6 p-3 px-5 rounded-2xl bg-[#14141a]/90 border border-[#27272a] backdrop-blur-sm self-start md:self-auto shadow-sm">
             <div>
-              <span className="block text-xl font-bold text-white tracking-tight">13</span>
+              <span className="block text-xl font-bold text-white tracking-tight">{certifications.length}</span>
               <span className="text-[11px] text-slate-400 font-medium">Certificats</span>
             </div>
             <div className="h-7 w-px bg-[#27272a]" />

@@ -330,6 +330,36 @@ export const skillCategories = [
 
 export const certifications = [
   {
+    id: "cert-365ds-deep-learning-tensorflow",
+    title: "Deep Learning with TensorFlow 2",
+    issuer: "365 Data Science",
+    date: "Novembre 2026",
+    duration: "11.5 CPE Credits",
+    credentialId: "CC-31F010E282",
+    url: "https://learn.365datascience.com/certificates/CC-31F010E282/",
+    pdf: "/certificates/Deep Learning with TensorFlow 2.pdf",
+    image: "/certificates/images/365ds-deep-learning-tensorflow.jpg",
+    category: "analytics-ai",
+    categoryLabel: "Deep Learning & IA",
+    skills: ["TensorFlow 2", "Deep Learning", "Réseaux de Neurones", "Keras", "Modélisation"],
+    highlight: true
+  },
+  {
+    id: "cert-365ds-aws-cloud",
+    title: "Introduction to AWS Cloud",
+    issuer: "365 Data Science",
+    date: "Novembre 2026",
+    duration: "4 CPE Credits",
+    credentialId: "CC-72AE692357",
+    url: "https://learn.365datascience.com/certificates/CC-72AE692357/",
+    pdf: "/certificates/Introduction to AWS Cloud!.pdf",
+    image: "/certificates/images/365ds-aws-cloud.jpg",
+    category: "cloud-db",
+    categoryLabel: "Cloud AWS",
+    skills: ["AWS Cloud", "Services Cloud AWS", "EC2 & S3", "Cloud Computing"],
+    highlight: true
+  },
+  {
     id: "cert-udemy-python",
     title: "Learn to Code in Python 3: Programming beginner to advanced",
     issuer: "Udemy",
